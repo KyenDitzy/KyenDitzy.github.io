@@ -1,0 +1,16 @@
+.ital {
+    font-style: italic;
+}
+.filmStill {
+    width: 400px;
+    border-style: solid;
+}
+.sideBySide {
+    display: flex;
+    border-width: medium;
+}
+.filmInfo {
+    min-width: 1200px;
+    max-width: 1200px;
+    border-style: solid;
+}

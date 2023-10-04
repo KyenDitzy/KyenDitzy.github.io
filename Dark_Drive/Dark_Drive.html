@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1>Some Memorable Movies</h1>
+<h3><span class="ital">Dark Drive</span> (Kyen Ditzenberger, 2022)</h3>
+	
+<div class="sideBySide">
+<img class="filmStill" onClick="onClick_stalker_img01()" src="images/Dark1.jpg" alt="Dark Drive">
+<img class="filmStill" onClick="onClick_stalker_img02()" src="images/Dark2.jpg" alt="Dark Drive">
+<img class="filmStill" onClick="onClick_stalker_img03()" src="images/Dark3.jpg" alt="Dark Drive">
+</div>
+
+<p class="filmInfo" id="STALKER_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias facere amet voluptatem, quaerat hic! Deleniti magnam animi eius sunt iste iusto neque quaerat id rerum laborum sapiente fugiat corporis eaque, reiciendis quod, voluptate sit dolor in ad totam quas dolorum consequatur ex? Pariatur inventore, dicta? Cupiditate officia consectetur expedita.</p>
+	
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Watch Film Here</button>
+
+</body>
+<script>
+	
+// DARK DRIVE SECTION //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");	
+	
+var img01_clicked = false;	
+var img02_clicked = false;	
+var img03_clicked = false;
+	
+var STALKER_text = document.getElementById("STALKER_text");
+gotoMovie_btn.style.visibility = "hidden";
+
+var STALKER_text = document.getElementById("STALKER_text");
+STALKER_text.innerHTML = "Hello, World";	
+var STALKER00 = "An observational chapter in the life of an alcoholic who, one day, seeks an alternative method to elucidate his habits. Dark Drive was filmed and directed by me (Kyen Ditzenberger) in 2022 for my senior film in college at UWM. This film is essentially the culmination of both reality and other worldy layers. Over the course of multiple weeks I set off to explore ideas of addiction and hopelessness, how these themes could be played with in a unique way was my biggest objective. Dark Drive is honestly both fiction and a documentary story all in one.";
+	
+STALKER_text.innerHTML = STALKER00;
+	
+var STALKER01 = "Here we see our main character, Ryan, riding through a local country road. This frame happens halfway through the film. This is essentially where the turning point begins for Ryan. Deciding to give alcohol a bit of a break he sets off to get some alone time on the road. He eventually arrives at a friend's house who sells him magic mushrooms. His journey from here begins to slowly unfold."
+
+var STALKER02 = "Early on in the film Ryan is seen slamming a beer. After being kicked out from his girlfriend's house he is forced to move back in with his Mother for the time being. Although he has a place to stay it's interesting to see that he goes right to the booze. Ryan attends work later that night. Cooking to his heart's content we still see him sneaking a drink every so often."
+
+var STALKER03 = "We are now several hours into a full on mushroom trip. A few hours earlier Ryan visited an empty cove, the floor is covered in thousands of rocks as the nearby waves crash back and forth into them. After having somewhat of an out of body experience on the beach Ryan attempts to drive home. Somewhere deep in the forest we see Ryan driving rapidly through fields and tall grass."
+
+function onClick_stalker_img01(){
+	STALKER_text.innerHTML = STALKER01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}
+
+function onClick_stalker_img02(){
+	STALKER_text.innerHTML = STALKER02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+
+function onClick_stalker_img03(){
+	STALKER_text.innerHTML = STALKER03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}	
+	
+function gotoMovie(){
+	window.open("https://www.youtube.com/watch?v=42WTz1IRXl8&t=7s", "_blank");
+}
+	
+	
+</script>
+</html>
